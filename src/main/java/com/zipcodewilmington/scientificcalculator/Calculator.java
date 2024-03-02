@@ -30,4 +30,12 @@ public class Calculator {
         this.currentValue = currentValue / num;
         return this.currentValue;
     }
+    public double squareRoot(double x){
+        this.currentValue = Math.sqrt(x);
+        return this.currentValue;
+    }
+    public double square(double x){
+        this.currentValue = x*x;
+        return this.currentValue;
+    }
 }
