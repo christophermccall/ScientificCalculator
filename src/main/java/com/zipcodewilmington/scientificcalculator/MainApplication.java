@@ -28,9 +28,12 @@ public class MainApplication {
             Console.println("6.) Division");
             Console.println("7.) Square");
             Console.println("8.) Square Root");
+            Console.println("9.) Exponential");
+            Console.println("10.) Inverse");
+            Console.println("11.) Invert Signs");
 
             // other operations
-            Console.println("9.) Exit");
+            Console.println("12.) Exit");
             userInput = Console.getIntegerInput("Please select from the following options: ");
             switch (userInput){
                 case 1:
@@ -75,6 +78,21 @@ public class MainApplication {
                     break;
 
                 case 9:
+                    // for exponential
+                    double number6 = Console.getDoubleInput("Enter a value of exponent: ");
+                    calculator.exponential(number6);
+                    break;
+
+                case 10:
+                    // for inverse of a number
+                   calculator.inverse();
+                    break;
+                case 11:
+                    // for invert signs
+                    calculator.invertSign();
+                    break;
+
+                case 12:
                     // to exit
                     System.exit(0);
                 default:

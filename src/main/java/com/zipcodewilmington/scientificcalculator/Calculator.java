@@ -38,4 +38,16 @@ public class Calculator {
         this.currentValue = x*x;
         return this.currentValue;
     }
+    public double exponential(double x){
+        this.currentValue = Math.pow(currentValue,x);
+        return this.currentValue;
+    }
+    public double inverse(){
+        this.currentValue = 1/currentValue;
+        return this.currentValue;
+    }
+    public double invertSign(){
+        this.currentValue = -currentValue;
+        return this.currentValue;
+    }
 }
