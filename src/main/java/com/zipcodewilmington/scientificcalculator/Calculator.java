@@ -30,12 +30,12 @@ public class Calculator {
         this.currentValue = currentValue / num;
         return this.currentValue;
     }
-    public double squareRoot(double x){
-        this.currentValue = Math.sqrt(x);
+    public double squareRoot(){
+        this.currentValue = Math.sqrt(this.currentValue);
         return this.currentValue;
     }
-    public double square(double x){
-        this.currentValue = x*x;
+    public double square(){
+        this.currentValue = this.currentValue * this.currentValue;
         return this.currentValue;
     }
     public double exponential(double x){

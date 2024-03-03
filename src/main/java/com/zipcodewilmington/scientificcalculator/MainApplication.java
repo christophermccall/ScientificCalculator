@@ -6,14 +6,18 @@ package com.zipcodewilmington.scientificcalculator;
  */
 public class MainApplication {
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-//        String s = Console.getStringInput("Enter a string");
-//        Integer i = Console.getIntegerInput("Enter an integer");
-//        Double d = Console.getDoubleInput("Enter a double.");
-//
-//        Console.println("The user input %s as a string", s);
-//        Console.println("The user input %s as a integer", i);
-//         Console.println("The user input %s as a d", d);
+
+        Console.println("\n" +
+                "          _______  _        _______  _______  _______  _______ _________ _______  _______ \n" +
+                "|\\     /|(  ____ \\( (    /|(  ___  )(  ____ \\(  ____ )(  ___  )\\__   __/(  ____ \\(  ____ \\\n" +
+                "( \\   / )| (    \\/|  \\  ( || (   ) || (    \\/| (    )|| (   ) |   ) (   | (    \\/| (    \\/\n" +
+                " \\ (_) / | (__    |   \\ | || |   | || |      | (____)|| (___) |   | |   | (__    | (_____ \n" +
+                "  ) _ (  |  __)   | (\\ \\) || |   | || |      |     __)|  ___  |   | |   |  __)   (_____  )\n" +
+                " / ( ) \\ | (      | | \\   || |   | || |      | (\\ (   | (   ) |   | |   | (            ) |\n" +
+                "( /   \\ )| (____/\\| )  \\  || (___) || (____/\\| ) \\ \\__| )   ( |   | |   | (____/\\/\\____) |\n" +
+                "|/     \\|(_______/|/    )_)(_______)(_______/|/   \\__/|/     \\|   )_(   (_______/\\_______)\n" +
+                "                                                                                          \n");
+        Console.println("Welcome to our calculator!");
 
         Calculator calculator = new Calculator();
         Console.println("\n%s\n", calculator.getCurrentValue());
@@ -68,13 +72,11 @@ public class MainApplication {
                     break;
                 case 7:
                     // to find square of a number
-                    double number4 = Console.getDoubleInput("Enter a value to do square: ");
-                    calculator.square(number4);
+                    calculator.square();
                     break;
                 case 8:
                     // for square root
-                    double number5 = Console.getDoubleInput("Enter a value to do square root: ");
-                    calculator.squareRoot(number5);
+                    calculator.squareRoot();
                     break;
 
                 case 9:
