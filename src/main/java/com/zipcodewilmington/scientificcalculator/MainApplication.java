@@ -270,13 +270,48 @@ public class MainApplication {
 
                                         default:
                                             Console.println("Invalid entry try again");
+
                                     }
                                 }
 
+                            case 5:
+                                while(true) {
+                                    Console.println("1.) Log");
+                                    Console.println("2.) Inverse Log");
+                                    Console.println("3.) Natural Log");
+                                    Console.println("4.) Inverse Natural Log");
+                                userInput = Console.getIntegerInput("select option");
+                                switch (userInput) {
+                                    case 1:
+                                        double nums = Console.getDoubleInput("Enter a value");
+                                        System.out.println(scientific.getLog(nums));
+                                        break;
 
-                            case 13:
+                                    case 2:
+                                        double nums1 = Console.getDoubleInput("Enter a value");
+                                        System.out.println(scientific.getInLog(nums1));
+                                        break;
+                                    case 3:
+                                        double nums2 = Console.getDoubleInput("Enter a value");
+                                        System.out.println(scientific.getLnlog(nums2));
+                                        break;
+                                    case 4:
+                                        double nums3 = Console.getDoubleInput("Enter a value");
+                                        System.out.println(scientific.getInLnLog(nums3));
+                                        break;
+
+                                    case 5:
+                                        System.exit(0);
+                                        break;
+
+                                    default:
+                                        Console.println("Invalid entry try again");
+                                }
+                                }
+
+                                case 13:
                                 // to exit
-                                System.exit(0);
+                                                             System.exit(0);
                             default:
                                 Console.println("Invalid entry try again");
 
