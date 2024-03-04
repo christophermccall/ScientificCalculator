@@ -51,7 +51,7 @@ public class Scientific {
         return this.con;
     }
 
-    public String decCon(int num2) {
+    public String decCon(int num2) { //Danny : MISSING decCon CODE
 
         return this.con;
     }
@@ -103,13 +103,13 @@ public class Scientific {
 
     }
 
-    public double getIncosine(int num8){
+    public double getIncosine(double num8){ //Danny : changed int to double
         this.currentVal = acos(num8);
         return this.currentVal;
 
     }
 
-    public double getIntangent(int num9){
+    public double getIntangent(double num9){ //Danny : changed int to double
         this.currentVal = atan(num9);
         return this.currentVal;
 
