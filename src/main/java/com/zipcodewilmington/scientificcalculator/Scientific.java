@@ -94,7 +94,6 @@ public class Scientific {
     public double getTangent(double num6){
         this.currentVal = tan(toRadians(num6));
         return this.currentVal;
-
     }
 
     public double getInsine(int num7){
