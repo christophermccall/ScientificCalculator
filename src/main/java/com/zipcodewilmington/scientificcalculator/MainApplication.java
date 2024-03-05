@@ -75,7 +75,7 @@ public class MainApplication {
                 case 5:
                     // for multiplication
                     double number2 = Console.getDoubleInput("Enter a value to multiply: ");
-                    calculator.multiply(number2);
+                    System.out.println(calculator.multiply(number2));
                     break;
                 case 6:
                     // for division
@@ -307,11 +307,16 @@ public class MainApplication {
                                     default:
                                         Console.println("Invalid entry try again");
                                 }
+
                                 }
+                                    case 6:
+                                    System.exit(0);
+                                            break;
 
                                 case 13:
                                 // to exit
-                                                             System.exit(0);
+                                    System.exit(0);
+                                    break;
                             default:
                                 Console.println("Invalid entry try again");
 

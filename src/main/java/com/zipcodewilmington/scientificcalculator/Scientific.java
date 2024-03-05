@@ -80,19 +80,19 @@ public class Scientific {
     }
 
     public double getSine(double num4){
-        this.currentVal = sin(num4);
+        this.currentVal = Math.sin(Math.toRadians(num4));
         return this.currentVal;
 
     }
 
     public double getCosine(double num5){
-        this.currentVal = cos(num5);
+        this.currentVal = cos(toRadians(num5));
         return this.currentVal;
 
     }
 
     public double getTangent(double num6){
-        this.currentVal = tan(num6);
+        this.currentVal = tan(toRadians(num6));
         return this.currentVal;
 
     }
