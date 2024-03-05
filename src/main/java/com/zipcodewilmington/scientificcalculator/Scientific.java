@@ -31,7 +31,7 @@ public class Scientific {
     }
 
 
-    public String getCon (){
+    public String getCon(){
         return con;
     }
 
@@ -79,22 +79,21 @@ public class Scientific {
         return this.currentVal;
     }
 
-    public double getSine(int num4){
-        this.currentVal = sin(num4);
+    public double getSine(double num4){
+        this.currentVal = Math.sin(Math.toRadians(num4));
         return this.currentVal;
 
     }
 
-    public double getCosine(int num5){
-        this.currentVal = cos(num5);
+    public double getCosine(double num5){
+        this.currentVal = cos(toRadians(num5));
         return this.currentVal;
 
     }
 
-    public double getTangent(int num6){
-        this.currentVal = tan(num6);
+    public double getTangent(double num6){
+        this.currentVal = tan(toRadians(num6));
         return this.currentVal;
-
     }
 
     public double getInsine(int num7){
