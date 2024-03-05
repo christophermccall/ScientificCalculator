@@ -31,6 +31,7 @@ public class MainApplication {
         Console.println("\n%s\n", calculator.getCurrentValue());
         int userInput;
         String stringInput;
+        boolean isScientific = false;
         while (true) {
 
             Console.println("1.) Clear Display");
@@ -106,131 +107,134 @@ public class MainApplication {
                     break;
 
                 case 12:
+                    isScientific = true;
+                    while(isScientific) {
 
-                        Console.println("1.) Display: Bin Oct Dec Hex");
-                        Console.println("2.) Trig: Sin Cos Tan Asin Acos Atan");
-                        Console.println("3.) Memory: Add");
-                        Console.println("4.) Display Trig: Degrees Radians)");
-                        Console.println("5.) Log Functions: Log InLog LnLog InLnLog)");
-                        Console.println("6.) Exit");
+                        Console.println("\nDisplay: \"Bin\" \"Oct\" \"Dec\" \"Hex\"");
+                        Console.println("Trig: \"Sin\" \"Cos\" \"Tan\" \"Asin\" \"Acos\" \"Atan\"");
+                        Console.println("Memory: \"Add\"");
+                        Console.println("Display Trig: \"Degrees\" \"Radians\"");
+                        Console.println("Log Functions: \"Log\" \"InLog\" \"LnLog\" \"InLnLog\"");
+                        Console.println("\"Exit\"\n");
+                        stringInput = Console.getStringInput("Select one of the following option in quotes\n");
 
+                        switch (stringInput) {
+                            case "Bin":
+                                //binary conversion here
+                                int num1 = Console.getIntegerInput("Enter a value of exponent: ");
+                                System.out.println(scientific.binCon(num1));
+                                break;
 
+                            case "Oct":
+                                //octal conversion
+                                int num2 = Console.getIntegerInput("Enter a value of exponent: ");
+                                System.out.println(scientific.octCon(num2));
+                                break;
 
-                                    stringInput = Console.getStringInput("select option");
-                                    switch (stringInput) {
-                                        case "Bin":
-                                            //binary conversion here
-                                            int num1 = Console.getIntegerInput("Enter a value of exponent: ");
-                                            System.out.println(scientific.binCon(num1));
-                                            break;
+                            case "Dec":
+                                //decimal conversion
+                                int num3 = Console.getIntegerInput("Enter a value of exponent: ");
+                                System.out.println(scientific.decCon(num3));
+                                break;
 
-                                        case "Oct":
-                                            //octal conversion
-                                            int num2 = Console.getIntegerInput("Enter a value of exponent: ");
-                                            System.out.println(scientific.octCon(num2));
-                                            break;
+                            case "Hex":
+                                // hexadecimal conversion
+                                int num4 = Console.getIntegerInput("Enter a value of exponent: ");
+                                System.out.println(scientific.hexCon(num4));
+                                break;
 
-                                        case "Dec":
-                                            //decimal conversion
-                                            int num3 = Console.getIntegerInput("Enter a value of exponent: ");
-                                            System.out.println(scientific.decCon(num3));
-                                            break;
+                            case "Sin":
+                                int num = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getSine(num));
+                                continue;
 
-                                        case "Hex":
-                                            // hexadecimal conversion
-                                            int num4 = Console.getIntegerInput("Enter a value of exponent: ");
-                                            System.out.println(scientific.hexCon(num4));
-                                            break;
+                            case "Cos":
+                                int numa1 = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getCosine(numa1));
 
-                                        case "Sin":
-                                            int num = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getSine(num));
-                                            continue;
+                                break;
 
-                                        case "Cos":
-                                            int numa1 = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getCosine(numa1));
+                            case "Tan":
+                                int numa2 = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getTangent(numa2));
+                                break;
 
-                                            break;
+                            case "Asin":
+                                int numa3 = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getInsine(numa3));
 
-                                        case "Tan":
-                                            int numa2 = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getTangent(numa2));
-                                            break;
+                                break;
 
-                                        case "Asin":
-                                            int numa3 = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getInsine(numa3));
+                            case "Acos":
+                                int numa4 = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getIncosine(numa4));
+                                break;
 
-                                            break;
+                            case "Atan":
+                                int num5 = Console.getIntegerInput("Enter a value");
+                                System.out.println(scientific.getIntangent(num5));
 
-                                        case "Acos":
-                                            int numa4 = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getIncosine(numa4));
-                                            break;
+                            case "Add":
+                                //save to memory
+                                double file = Console.getDoubleInput("Enter number to save");
 
-                                        case "Atan":
-                                            int num5 = Console.getIntegerInput("Enter a value");
-                                            System.out.println(scientific.getIntangent(num5));
+                                scientific.setSave(file);
+                                break;
+                            case "print":
+                                //print memory
+                                System.out.println(scientific.getSave());
+                                break;
 
-                                        case "Add":
-                                            //save to memory
-                                            double file = Console.getDoubleInput("Enter number to save");
+                            case "Deg":
+                                double numb = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.degCon(numb));
 
-                                            scientific.setSave(file);
-                                            break;
-                                        case "print":
-                                            //print memory
-                                            System.out.println(scientific.getSave());
-                                            break;
+                                break;
 
-                                        case "Deg":
-                                            double numb = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.degCon(numb));
+                            case "Rad":
 
-                                            break;
+                                double numb1 = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.radCon(numb1));
+                                break;
 
-                                        case "Rad":
+                            case "Log":
+                                double nums = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.getLog(nums));
+                                break;
 
-                                            double numb1 = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.radCon(numb1));
-                                            break;
+                            case "InLog":
+                                double nums1 = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.getInLog(nums1));
+                                break;
+                            case "LnLog":
+                                double nums2 = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.getLnlog(nums2));
+                                break;
+                            case "InLnLog":
+                                double nums3 = Console.getDoubleInput("Enter a value");
+                                System.out.println(scientific.getInLnLog(nums3));
+                                break;
 
-                                        case "Log":
-                                            double nums = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.getLog(nums));
-                                            break;
+                            case "Exit":
+                                isScientific = false;
+                                break;
 
-                                        case "InLog":
-                                            double nums1 = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.getInLog(nums1));
-                                            break;
-                                        case "LnLog":
-                                            double nums2 = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.getLnlog(nums2));
-                                            break;
-                                        case "InLnLog":
-                                            double nums3 = Console.getDoubleInput("Enter a value");
-                                            System.out.println(scientific.getInLnLog(nums3));
-                                            break;
-
-                                        case "Exit":
-                                            break;
-
-                                        default:
-                                            Console.println("Invalid entry try again");
-                                    }
-
-                                case 13:
-                                // to exit
-                                    System.exit(0);
-                                    break;
                             default:
                                 Console.println("Invalid entry try again");
-
+                                break;
                         }
+                    }
+                    break;
+                case 13:
+                    // to exit
+                    System.exit(0);
+                    break;
+                default:
+                    Console.println("Invalid entry try again");
 
-                        Console.println("\n%s\n", calculator.getCurrentValue());
+                }
+
+                Console.println("\n%s\n", calculator.getCurrentValue());
 
 
 
