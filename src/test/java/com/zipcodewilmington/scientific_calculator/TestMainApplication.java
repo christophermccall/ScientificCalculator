@@ -22,6 +22,8 @@ public class TestMainApplication {
         assertEquals(15, result, 0.01);
     }
 
+
+
     @Test //Testing Core Subtraction Function PASSED
     public void subTest() {
         calc.setCurrentValue(10);
@@ -90,32 +92,29 @@ public class TestMainApplication {
         assertEquals(expectedResult, scientific.binCon(num));
     }
 
-    @Test //Testing Scientific Oc Con Function
+    @Test //Testing Scientific Oc Con Function PASSED
     public void octConTest() {
         int num1 = 20;
         String expectedResult = "24";
         assertEquals(expectedResult, scientific.octCon(num1));
     }
 
-    /* @Test MISSING DEC CON SCIENTIFIC CODE
-    public void decConTest() {
-    } */
 
-    @Test //Testing Scientific Hex Con
+    @Test //Testing Scientific Hex Con PASSED
     public void hexConTest() {
         int num3 = 255;
         String expectedHex = "ff";
         assertEquals(expectedHex, scientific.hexCon(num3));
     }
 
-    @Test //Testing Scientific DEG Con Function
+    @Test //Testing Scientific DEG Con Function PASSED
     public void degConTest() {
         double num = -Math.PI;
         double expectedDegrees = -180.0;
         assertEquals(expectedDegrees, scientific.degCon(num), 0.001);
     }
 
-    @Test //Testing Scientific Rad Con Function
+    @Test //Testing Scientific Rad Con Function PASSED
     public void radConTest() {
         double num = 90.0;
         double expectedRadians = Math.PI / 2;
@@ -123,29 +122,7 @@ public class TestMainApplication {
     }
 
 
-    @Test //Testing Scientific Sine Function
-    public void getSineTest() {
-        int num4 = 30;
-        double expectedSine = Math.sin(Math.toRadians(num4));
-        assertEquals(expectedSine, scientific.getSine(num4), 0.001);
-    }
-
-    @Test //Testing Scientific Cosine Function
-    public void getCosineTest() {
-        int num5 = 60;
-        double expectedCosine = Math.cos(Math.toRadians(num5));
-        assertEquals(expectedCosine, scientific.getCosine(num5), 0.001);
-    }
-
-    @Test //Testing Scientific Tangent Function
-    public void getTangentTest() {
-        int num6 = 30;
-        double expectedTangent = Math.tan(Math.toRadians(num6));
-        double actualTangent = scientific.getTangent(num6);
-        assertEquals(expectedTangent, actualTangent, 0.0001);
-    }
-
-    @Test //Testing Scientific Insine Function
+    @Test //Testing Scientific Insine Function PASSED
     public void getInsineTest() {
         int num7 = 90;
         double expectedInsine = Math.asin(Math.toRadians(num7));
@@ -153,7 +130,7 @@ public class TestMainApplication {
         assertEquals(expectedInsine, actualInsine, 0.0001);
     }
 
-    @Test //Testing Scientific Incosine Function
+    @Test //Testing Scientific Incosine Function PASSED
     public void getIncosineTest() {
         double num8 = 1;
         double expectedIncosine = Math.acos(num8);
@@ -161,7 +138,7 @@ public class TestMainApplication {
         assertEquals(expectedIncosine, actualIncosine, 0.0001);
     }
 
-    @Test //Testing Scientific Intangent Function
+    @Test //Testing Scientific Intangent Function PASSED
     public void getIntangentTest() {
         double num9 = 0.5;
         double expectedIntangent = Math.atan(num9);
@@ -169,7 +146,7 @@ public class TestMainApplication {
         assertEquals(expectedIntangent, actualIntangent, 0.0001);
     }
 
-    @Test //Testing Scientific Get Log Function
+    @Test //Testing Scientific Get Log Function PASSEd
     public void getLogTest() {
         double nums = 100;
         double expectedLog = Math.log10(nums);
@@ -177,7 +154,7 @@ public class TestMainApplication {
         assertEquals(expectedLog, actualLog, 0.0001);
     }
 
-    @Test //Testing Scientific Get In Log Function
+    @Test //Testing Scientific Get In Log Function PASSED
     public void getInLogTest() {
         double nums1 = 100;
         double expectedInLog = Math.pow(Math.E, Math.log10(nums1));
@@ -185,7 +162,7 @@ public class TestMainApplication {
         assertEquals(expectedInLog, actualInLog, 0.0001);
     }
 
-    @Test // Testing Scientific Get Ln Log Function
+    @Test // Testing Scientific Get Ln Log Function PASSED
     public void getLnLogTest() {
         double nums2 = 100;
         double expectedLnlog = Math.log(nums2);
@@ -193,7 +170,7 @@ public class TestMainApplication {
         assertEquals(expectedLnlog, actualLnlog, 0.0001);
     }
 
-    @Test // Testing Scientific Get In Ln Log Function
+    @Test // Testing Scientific Get In Ln Log Function PASSED
     public void getInLnLogTest() {
         double nums3 = 100;
         double expectedInLnLog = Math.pow(Math.E, Math.log(nums3));
@@ -201,7 +178,7 @@ public class TestMainApplication {
         assertEquals(expectedInLnLog, actualInLnLog, 0.0001);
     }
 
-    @Test // Testing Set Save and Get Save
+    @Test // Testing Set Save and Get Save PASSED
     public void getSaveAndSetSaveTest() {
         double saveValue = 10.5;
         double result = scientific.setSave(saveValue);
@@ -210,12 +187,32 @@ public class TestMainApplication {
         assertEquals(saveValue, savedValue, 0.0001);
     }
 
-    @Test // Testing Get Con and Set Con
+    @Test // Testing Get Con and Set Con PASSED
     public void testGetConAndSetCon() {
         String initialCon = "Hello World";
         scientific.setCon(initialCon);
         String retrievedCon = scientific.getCon();
         assertEquals(initialCon, retrievedCon);
     }
-    
+    @Test //Testing Scientific Sine Function PASSED
+    public void getSineTest() {
+        int num4 = 30;
+        double expectedSine = Math.sin(Math.toRadians(num4));
+        assertEquals(expectedSine, scientific.getSine(num4), 0.001);
+    }
+
+    @Test //Testing Scientific Tangent Function PASSED
+    public void getTangentTest() {
+        int num6 = 30;
+        double expectedTangent = Math.tan(Math.toRadians(num6));
+        double actualTangent = scientific.getTangent(num6);
+        assertEquals(expectedTangent, actualTangent, 0.0001);
+    }
+
+    @Test //Testing Scientific Cosine Function PASSED
+    public void getCosineTest() {
+        int num5 = 60;
+        double expectedCosine = Math.cos(Math.toRadians(num5));
+        assertEquals(expectedCosine, scientific.getCosine(num5), 0.001);
+    }
 }
